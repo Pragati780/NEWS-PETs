@@ -95,23 +95,32 @@ export class News extends Component {
 
     return (
       <div className="container my-5" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <div className="text-center my-4">
-          <h1>News-PET Top {this.props.category} Headlines</h1>
-        </div>
+        <div className="text-center my-6">
+  <h1 className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:w-full after:h-1 after:bg-blue-500 after:left-0 after:bottom-0 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">
+    News-PET Top {this.props.category} Headlines
+  </h1>
+  <p className="text-lg text-gray-600 mt-2">Stay updated with the latest news from around the world.</p>
+</div>
 
-        <div className="row">
-          {articles.map((article, index) => (
-            <div className="col-md-3 mx-3 my-2" key={index}>
-              <NewsItem
-                Title={article.title || "No Title"}
-                description={article.description || "No Description"}
-                imgUrl={article.urlToImage || defaultImage}
-                newsurl={article.url || "#"}
-                time={article.publishedAt}
-              />
-            </div>
-          ))}
-        </div>
+
+
+
+        <div className="container">
+  <div className="row justify-content-center">
+    {articles.map((article, index) => (
+      <div className="col-md-4 d-flex justify-content-center my-3" key={index}>
+        <NewsItem
+          Title={article.title || "No Title"}
+          description={article.description || "No Description"}
+          imgUrl={article.urlToImage || defaultImage}
+          newsurl={article.url || "#"}
+          time={article.publishedAt}
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {loading && (
           <div className="text-center my-5">

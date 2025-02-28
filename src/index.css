@@ -13,16 +13,18 @@ code {
 }
 
 /* Mobile View */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .card {
     width: 100%;
-    margin-bottom: 1rem;
+    margin: 10px 0;
   }
 
-  .navbar {
-    font-size: 14px;
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
   }
 }
+
 
 /* Tablet View */
 @media (max-width: 768px) {
