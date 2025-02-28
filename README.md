@@ -14,4 +14,4 @@ A React-based news application that fetches the latest headlines using the News 
 ## How to Run  
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/Pragati780/News-PET.git
+   git clone https://github.com/Pragati780/News-PETs.git
