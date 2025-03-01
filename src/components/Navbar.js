@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css"; // Import the CSS file
+import "./Navbar.css";
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-
-  const handleInputChange = (event) => {
-    setSearchQuery(event.target.value.toLowerCase());
-  };
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -24,8 +20,8 @@ const Navbar = () => {
       "technology",
     ];
 
-    if (categories.includes(searchQuery)) {
-      navigate(`/${searchQuery}`);
+    if (categories.includes(searchQuery.toLowerCase())) {
+      navigate(`/${searchQuery.toLowerCase()}`);
     } else {
       alert("Category not found! Try: Business, Sports, Technology, etc.");
     }
@@ -61,18 +57,18 @@ const Navbar = () => {
             <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
           </ul>
           <form className="d-flex search-form" role="search" onSubmit={handleSearch}>
-          <input
-            className="form-control me-2 search-input"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button className="btn btn-outline-success search-button" type="submit">
-            Search
-          </button>
-        </form>
+            <input
+              className="form-control me-2 search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button className="btn btn-outline-success search-button" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
