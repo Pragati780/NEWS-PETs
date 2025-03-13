@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/NEWS-PETs/static/css/main.b89a8c74.css",
+    "main.js": "/NEWS-PETs/static/js/main.7933c7b6.js",
+    "static/js/488.d01864fa.chunk.js": "/NEWS-PETs/static/js/488.d01864fa.chunk.js",
+    "index.html": "/NEWS-PETs/index.html",
+    "main.b89a8c74.css.map": "/NEWS-PETs/static/css/main.b89a8c74.css.map",
+    "main.7933c7b6.js.map": "/NEWS-PETs/static/js/main.7933c7b6.js.map",
+    "488.d01864fa.chunk.js.map": "/NEWS-PETs/static/js/488.d01864fa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b89a8c74.css",
+    "static/js/main.7933c7b6.js"
+  ]
+}
